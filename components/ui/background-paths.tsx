@@ -116,7 +116,7 @@ export function BackgroundPaths({ title = 'Background Paths', onStart, children 
                             group-hover:-translate-y-0.5 border border-black/10 dark:border-white/10
                             hover:shadow-md dark:hover:shadow-neutral-800/50"
 						>
-							<span className="opacity-90 group-hover:opacity-100 transition-opacity">Hızlı Bşlangıç</span>
+							<span className="opacity-90 group-hover:opacity-100 transition-opacity">Hızlı Başlangıç</span>
 							<span
 								className="ml-2 opacity-70 group-hover:opacity-100 group-hover:translate-x-1.5 
                                 transition-all duration-300"
