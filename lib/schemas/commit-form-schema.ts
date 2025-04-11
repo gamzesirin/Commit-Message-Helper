@@ -16,7 +16,7 @@ export const commitTypeEnum = z.enum([
 
 export const commitFormSchema = z.object({
 	type: commitTypeEnum.describe('Commit Türü'),
-	scope: z.string().min(1, 'Kapsam alanı zorunludur'),
+	scope: z.string().optional(),
 	description: z.string().min(1, 'Açıklama alanı zorunludur').max(100, 'Açıklama çok uzun'),
 	body: z.string().optional(),
 	footer: z.string().optional()

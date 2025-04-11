@@ -32,7 +32,7 @@ export function CommitForm() {
 	const formValues = watch()
 	const commitMessage = generateCommitMessage(formValues)
 
-	const isRequiredFieldsFilled = Boolean(formValues.type && formValues.scope && formValues.description)
+	const isRequiredFieldsFilled = Boolean(formValues.type && formValues.description)
 
 	const handleInputChange =
 		(field: keyof CommitFormData) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -68,18 +68,14 @@ export function CommitForm() {
 
 				<div className="space-y-2">
 					<Label className="flex items-center">
-						Kapsam
-						<span className="text-red-500 ml-1">*</span>
+						Kapsam (Opsiyonel)
 					</Label>
 					<Input
 						value={formValues.scope || ''}
 						onChange={handleInputChange('scope')}
 						placeholder="Kapsam girin (örn: auth)"
-						className={`bg-white/50 dark:bg-neutral-900/50 ${
-							touchedFields.scope && errors.scope ? 'border-red-500' : ''
-						}`}
+						className="bg-white/50 dark:bg-neutral-900/50"
 					/>
-					{touchedFields.scope && errors.scope && <p className="text-sm text-red-500">{errors.scope.message}</p>}
 				</div>
 			</div>
 
